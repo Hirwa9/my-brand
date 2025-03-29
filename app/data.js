@@ -23,7 +23,7 @@ export const routes = [
 // About data
 export const about = {
     title: 'About me',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus recusandae autem quo corporis tempora.',
+    description: "I'm a passionate fullstack developer, with a keen eye for design and digital solutions development.",
     info: [
         {
             fieldName: "Names",
@@ -79,20 +79,88 @@ export const socials = [
     { name: 'Facebook', icon: <FaFacebook className='size-6' />, path: 'https://www.facebook.com/profile.php?id=100009250550394', },
 ];
 
+// Projects data
+export const projects = [
+    {
+        category: "Fullstack Web App",
+        title: "Ingoboka Savings Management System",
+        description: "A platform for managing community groups savings, credit inquiries, and more financial transactions.",
+        stack: ["ReactJS", "BS5", "ExpressJs", "NodeJs", "JWT", "MySQL"],
+        image: "/assets/work/project-images/ingoboka_sm_system_landscape.png",
+        live: "https://ingoboka-savings-management-system.onrender.com",
+        github: "https://github.com/Hirwa9/ingoboka-savings-management-system",
+    },
+    {
+        category: "Fullstack Web App",
+        title: "Sam Real Estate",
+        description: "A real estate platform for buying, selling, and renting properties in Kigali city.",
+        stack: ["ReactJS", "BS5", "ExpressJs", "NodeJs", "JWT", "MySQL"],
+        image: "/assets/work/project-images/sam_real_estate_landscape.jpg",
+        live: "https://samrealestatee.com",
+        github: "https://github.com/Hirwa9/sam-real-estate",
+    },
+    {
+        category: "Fullstack Web App",
+        title: "Weather App",
+        description: "An intuitive Weather App that provides accurate and up-to-date weather forecasts for any chosen region.",
+        stack: ["Vite + ReactJS", "Tailwind CSS", "Javascript"],
+        image: "/assets/work/project-images/weather_webApp_landscape.jpg",
+        live: "https://weather-app-b41p.onrender.com",
+        github: "https://github.com/Hirwa9/weather-app",
+    },
+    {
+        category: "Web Development",
+        title: "Eliazar's personal website",
+        description: "A composer's personal website showcasing their music and portfolio content.",
+        stack: ["PHP", "Ajax", "MySQL", "jQuery", "JS", "HTML", "BS5"],
+        image: "/assets/work/project-images/eliazar_music_landscape.png",
+        live: "https://eliazarndayisabye.rf.gd/music.php",
+        github: "https://github.com/Hirwa9/Eliazar-Website",
+    },
+    {
+        category: "Web Development",
+        title: "Eastern Singers Group (ESG) website",
+        description: "A website for a music group showcasing their work and events, with a library of Rwandan Catholic music resources.",
+        stack: ["AngularJS", "PHP", "MySQL", "jQuery", "JS", "HTML", "BS5"],
+        image: "/assets/work/project-images/esg_landscape.jpg",
+        live: "https://esgrprwanda.com",
+        github: "https://github.com/Hirwa9/ESG-website",
+    },
+];
+
+// Services data
+export const services = [
+    {
+        title: 'Web Development',
+        description: 'Building stable, responsive and dynamic web solutions tailored to your needs.',
+        href: '',
+    },
+    {
+        title: 'Mobile Development',
+        description: 'Creating cross-platform and native mobile applications using cutting-edge technologies.',
+        href: '',
+    },
+    {
+        title: 'SEO',
+        description: 'Optimizing your website for search engines to improve visibility and traffic.',
+        href: '',
+    },
+];
+
 // Experience data
 export const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My experience',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus recusandae autem quo corporis tempora.',
+    description: 'So far, the projects and companies I have worked with, shaping my skills and expertise in the tech industry.',
     items: [
         {
             company: 'Ikimina Ingoboka',
-            position: 'Fullstach Developer',
+            position: 'Fullstack Developer',
             duration: '2024 (4 mos)',
         },
         {
             company: 'Sam Real Estate',
-            position: 'Fullstach Developer',
+            position: 'Fullstack Developer',
             duration: '2024 (5 mos)',
         },
         {
@@ -106,13 +174,13 @@ export const experience = {
             duration: '2022 (8 mos)',
         },
     ]
-}
+};
 
 // Skills data
 export const skills = {
     icon: '/assets/resume/cap.svg',
     title: 'My tech stack',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus recusandae autem quo corporis tempora.',
+    description: 'The tools that have become indispensable to me, serving as the foundation for tackling any project that I work on.',
     skillsSet: [
         { icon: <SiNextdotjs />, name: 'NextJS' },
         { icon: <FaReact />, name: 'ReactJS' },
@@ -143,13 +211,13 @@ export const skills = {
         { icon: <SiRender />, name: 'Render CI/CD' },
         { icon: <SiVercel />, name: 'Vercel CI/CD' },
     ]
-}
+};
 
 // Education data
 export const education = {
     icon: '/assets/resume/cap.svg',
     title: 'My education',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus recusandae autem quo corporis tempora.',
+    description: 'Institutions and certifications that have significantly contributed to my academic and professional growth, helping me to excel in the tech industry.',
     items: [
         {
             institution: 'ALX - Africa',
@@ -163,79 +231,11 @@ export const education = {
         },
         {
             institution: 'University of Rwanda',
-            degree: 'Bsc. Transporations Engineering',
+            degree: 'Bsc. Transportation Engineering',
             duration: '2021 - 2025',
         },
     ]
-}
-
-// Projects data
-export const projects = [
-    {
-        category: "Fullstack Web App",
-        title: "Ingoboka Savings Management System",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["ReactJS", "BS5", "ExpressJs", "NodeJs", "JWT", "MySQL"],
-        image: "/assets/work/project-images/ingoboka_sm_system_landscape.png",
-        live: "https://ingoboka-savings-management-system.onrender.com",
-        github: "https://github.com/Hirwa9/ingoboka-savings-management-system",
-    },
-    {
-        category: "Fullstack Web App",
-        title: "Sam Real Estate",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["ReactJS", "BS5", "ExpressJs", "NodeJs", "JWT", "MySQL"],
-        image: "/assets/work/project-images/sam_real_estate_landscape.jpg",
-        live: "https://samrealestatee.com",
-        github: "https://github.com/Hirwa9/sam-real-estate",
-    },
-    {
-        category: "Fullstack Web App",
-        title: "Weather App",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["Vite + ReactJS", "Tailwind CSS", "Javascript"],
-        image: "/assets/work/project-images/weather_webApp_landscape.jpg",
-        live: "https://weather-app-b41p.onrender.com",
-        github: "https://github.com/Hirwa9/weather-app",
-    },
-    {
-        category: "Web Development",
-        title: "Eliazar's personal website",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["PHP", "Ajax", "MySQL", "jQuery", "JS", "HTML", "BS5"],
-        image: "/assets/work/project-images/eliazar_music_landscape.png",
-        live: "https://eliazarndayisabye.rf.gd/music.php",
-        github: "https://github.com/Hirwa9/Eliazar-Website",
-    },
-    {
-        category: "Web Development",
-        title: "Eastern Singers Group (ESG) website",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["AngularJS", "PHP", "MySQL", "jQuery", "JS", "HTML", "BS5"],
-        image: "/assets/work/project-images/esg_landscape.jpg",
-        live: "https://esgrprwanda.com",
-        github: "https://github.com/Hirwa9/ESG-website",
-    },
-];
-
-// Services data
-export const services = [
-    {
-        title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        href: '',
-    },
-    {
-        title: 'Mobile Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        href: '',
-    },
-    {
-        title: 'SEO',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        href: '',
-    },
-];
+};
 
 // Stats data
 export const stats = [
