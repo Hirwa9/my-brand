@@ -6,10 +6,19 @@
 // This data is used to render the app components, not fetched from any API or database.
 
 // Icons
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaNodeJs, FaPhp, FaHtml5, FaCss3, FaLinux } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaNodeJs, FaPhp, FaHtml5, FaCss3, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiAxios, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiSass } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
+
+// Navigation routes
+export const routes = [
+    { name: 'home', path: '/', },
+    { name: 'services', path: '/services', },
+    { name: 'resume', path: '/resume', },
+    { name: 'work', path: '/work', },
+    { name: 'contact', path: '/contact', },
+];
 
 // About data
 export const about = {
@@ -60,6 +69,14 @@ export const info = [
         title: "Address",
         description: "Kigali - Rwanda"
     },
+];
+
+// Social media data
+export const socials = [
+    { name: 'Github', icon: <FaGithub className='size-6' />, path: 'https://github.com/Hirwa9', },
+    { name: 'LinkedIn', icon: <FaLinkedin className='size-6' />, path: 'http://linkedin.com/in/hirwa-cyuzuzo-willy-94159427b', },
+    { name: 'Instagram', icon: <FaInstagram className='size-6' />, path: 'https://www.instagram.com/hirwa__willy', },
+    { name: 'Facebook', icon: <FaFacebook className='size-6' />, path: 'https://www.facebook.com/profile.php?id=100009250550394', },
 ];
 
 // Experience data
@@ -217,5 +234,25 @@ export const services = [
         title: 'SEO',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         href: '',
+    },
+];
+
+// Stats data
+export const stats = [
+    {
+        num: new Date().getFullYear() - 2021,
+        text: "Years of experience",
+    },
+    {
+        num: 5,
+        text: "Projects completed",
+    },
+    {
+        num: 8,
+        text: "Technologies mastered",
+    },
+    {
+        num: 900,
+        text: "Code commints",
     },
 ];
