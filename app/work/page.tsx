@@ -12,54 +12,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { useState } from "react";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
-
-const projects = [
-    {
-        category: "Fullstack Web App",
-        title: "Ingoboka Savings Management System",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["ReactJS", "BS5", "ExpressJs", "NodeJs", "JWT", "MySQL"],
-        image: "/assets/work/project-images/ingoboka_sm_system_landscape.png",
-        live: "https://ingoboka-savings-management-system.onrender.com",
-        github: "https://github.com/Hirwa9/ingoboka-savings-management-system",
-    },
-    {
-        category: "Fullstack Web App",
-        title: "Sam Real Estate",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["ReactJS", "BS5", "ExpressJs", "NodeJs", "JWT", "MySQL"],
-        image: "/assets/work/project-images/sam_real_estate_landscape.jpg",
-        live: "https://samrealestatee.com",
-        github: "https://github.com/Hirwa9/sam-real-estate",
-    },
-    {
-        category: "Fullstack Web App",
-        title: "Weather App",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["Vite + ReactJS", "Tailwind CSS", "Javascript"],
-        image: "/assets/work/project-images/weather_webApp_landscape.jpg",
-        live: "https://weather-app-b41p.onrender.com",
-        github: "https://github.com/Hirwa9/weather-app",
-    },
-    {
-        category: "Web Development",
-        title: "Eliazar's personal website",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["PHP", "Ajax", "MySQL", "jQuery", "JS", "HTML", "BS5"],
-        image: "/assets/work/project-images/eliazar_music_landscape.png",
-        live: "https://eliazarndayisabye.rf.gd/music.php",
-        github: "https://github.com/Hirwa9/Eliazar-Website",
-    },
-    {
-        category: "Web Development",
-        title: "Eastern Singers Group (ESG) website",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: ["AngularJS", "PHP", "MySQL", "jQuery", "JS", "HTML", "BS5"],
-        image: "/assets/work/project-images/esg_landscape.jpg",
-        live: "https://esgrprwanda.com",
-        github: "https://github.com/Hirwa9/ESG-website",
-    },
-];
+// Data
+import { projects } from "@/app/data";
 
 const Work = () => {
     const [project, setProject] = useState(projects[0]);

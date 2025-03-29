@@ -2,24 +2,8 @@
 
 import CountUp from "react-countup";
 
-const stats = [
-    {
-        num: new Date().getFullYear() - 2021,
-        text: "Years of experience",
-    },
-    {
-        num: 5,
-        text: "Projects completed",
-    },
-    {
-        num: 8,
-        text: "Technologies mastered",
-    },
-    {
-        num: 900,
-        text: "Code commints",
-    },
-]
+// Data
+import { stats } from "@/app/data";
 
 const Stats = () => {
     return (
@@ -38,9 +22,8 @@ const Stats = () => {
                     })}
                 </div>
             </div>
-
         </section>
-    )
+    );
 }
 
 export default Stats;

@@ -4,28 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowDownRight } from "react-icons/bs";
 
-const services = [
-    {
-        title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        href: '',
-    },
-    {
-        title: 'Mobile Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        href: '',
-    },
-    {
-        title: 'SEO',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        href: '',
-    },
-    // {
-    //     title: 'Web Development',
-    //     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    //     href: '',
-    // },
-];
+// Data
+import { services } from "@/app/data";
 
 const Services = () => {
     return (

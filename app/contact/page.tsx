@@ -14,25 +14,9 @@ import {
     SelectTrigger,
     SelectValue
 } from "@/components/ui/select";
-import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
-const info = [
-    {
-        icon: <FaPhoneAlt />,
-        title: "Phone",
-        description: "(+250) 785 459 848",
-    },
-    {
-        icon: <FaEnvelope />,
-        title: "Email",
-        description: "hirwawilly9@gmail.com"
-    },
-    {
-        icon: <FaMapMarkerAlt />,
-        title: "Address",
-        description: "Kigali - Rwanda"
-    },
-];
+// Data
+import { info } from "@/app/data";
 
 const Contact = () => {
     return (

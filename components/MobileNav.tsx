@@ -5,13 +5,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { usePathname } from 'next/navigation';
 import { CiMenuFries } from 'react-icons/ci';
 
-const links = [
-    { name: 'home', path: '/', },
-    { name: 'services', path: '/services', },
-    { name: 'resume', path: '/resume', },
-    { name: 'work', path: '/work', },
-    { name: 'contact', path: '/contact', },
-];
+// Data
+import { routes } from '@/app/data';
 
 const MobileNav = () => {
     const pathname = usePathname();
@@ -32,19 +27,19 @@ const MobileNav = () => {
                         </Link>
                     </div>
                     <nav className="flex flex-col gap-8 sm:gap-3">
-                        {links.map((link, index) => {
+                        {routes.map((link, index) => {
                             return (
-                                // TBC Hide navbar on click
+                                // TBC: Hide navbar on click
                                 <Link key={index} href={link.path} className={`capitalize ${link.path === pathname ? 'text-end text-accent border-b-2 pb-4 border-accent' : ''} text-xl hover:text-accent transition-all`}>
                                     {link.name}
                                 </Link>
-                            )
+                            );
                         })}
                     </nav>
                 </SheetContent>
             </Sheet >
         </>
-    )
+    );
 }
 
 export default MobileNav;
