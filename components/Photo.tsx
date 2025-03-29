@@ -41,7 +41,7 @@ const Photo = () => {
                 </motion.svg>
             </motion.div>
         </div>
-    )
+    );
 }
 
 export default Photo;

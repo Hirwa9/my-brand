@@ -9,6 +9,7 @@ interface PageTransitionProps {
 }
 
 const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
+
     const pathname = usePathname();
 
     return (
