@@ -1,32 +1,32 @@
 
 import { motion } from 'framer-motion';
 
-const stairsCount = 3;
-
-// Variants
-const stairAnimation = {
-    initial: {
-        top: "0%",
-    },
-    animate: {
-        top: "100%",
-    },
-    exit: {
-        top: ["100%", "0%"],
-    },
-}
-
-// Calculate the reverse index for stagged delays
-const reverseIndex = (index: number) => {
-    const totalSteps = stairsCount;
-    return totalSteps - index - 1;
-
-}
-
 const Stairs = () => {
+
+    const stairsCount = 3;
+
+    // Variants
+    const stairAnimation = {
+        initial: {
+            top: "0%",
+        },
+        animate: {
+            top: "100%",
+        },
+        exit: {
+            top: ["100%", "0%"],
+        },
+    }
+
+    // Calculate the reverse index for stagged delays
+    const reverseIndex = (index: number) => {
+        const totalSteps = stairsCount;
+        return totalSteps - index - 1;
+    }
+
     return (
         <>
-            {/* Render n (6) motion divs each represening a step of the stairs
+            {/* Render n (3 for this case) motion divs each represening a step of the stairs
             Each dive woth the same animation, and dynamically calculated delay
             based on correspondeing reversed index, creating a stagged effect. */}
 
@@ -45,9 +45,8 @@ const Stairs = () => {
                     className='relative w-full h-full bg-white'
                 />
             ))}
-
         </>
-    )
+    );
 }
 
 export default Stairs;
