@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Stairs = () => {
 
-    const stairsCount = 5;
+    const stairsCount = 3;
 
     // Variants
     const stairAnimation = {
