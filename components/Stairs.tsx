@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Stairs = () => {
 
-    const stairsCount = 3;
+    const stairsCount = 5;
 
     // Variants
     const stairAnimation = {
@@ -38,11 +38,11 @@ const Stairs = () => {
                     animate="animate"
                     exit="exit"
                     transition={{
-                        duration: 0.4,
+                        duration: .6,
                         ease: 'backIn',
                         delay: reverseIndex(index) * 0.1,
                     }}
-                    className='relative w-full h-full bg-white'
+                    className='relative w-full h-full bg-accent'
                 />
             ))}
         </>
