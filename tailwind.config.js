@@ -25,16 +25,9 @@ module.exports = {
     extend: {
       colors: {
         primary: '#313133',
-
-        // primary: '#71b3b3',
-
         accent: {
           DEFAULT: '#71b3b3',
           hover: '#458484',
-
-          // DEFAULT: '#1c1c22',
-          // hover: '#3b3b48',
-
         },
       },
       keyframes: {
