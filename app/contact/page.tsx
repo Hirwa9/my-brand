@@ -79,6 +79,16 @@ const Contact = () => {
                 });
                 // Dismiss loading toast
                 if (loadingToast) toast.dismiss(loadingToast);
+            } else {
+                // Show error message
+                toast.error("Sorry! Something went wrong. Please try again.", {
+                    style: {
+                        backgroundColor: '#b30000',
+                        color: '#fff',
+                    },
+                });
+                // Dismiss loading toast
+                if (loadingToast) toast.dismiss(loadingToast);
             }
             resetForm();
         } catch (error) {
