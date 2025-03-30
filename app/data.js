@@ -1,9 +1,7 @@
 /**
  * App static data
  */
-// This file contains all the static data used in the app
-// such as about, experience, skills, education, projects, services, and contact info.
-// This data is used to render the app components, not fetched from any API or database.
+// This file contains all the static data used to render the app's components
 
 // Icons
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaNodeJs, FaPhp, FaHtml5, FaCss3, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
@@ -38,7 +36,7 @@ export const about = {
             fieldValue: `${new Date().getFullYear() - 1 - 2021}+ Years`,
         },
         {
-            fieldName: "Natinality",
+            fieldName: "Nationality",
             fieldValue: "Rwandan",
         },
         {
