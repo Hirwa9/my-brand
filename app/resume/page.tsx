@@ -7,6 +7,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 // Data
 import { about, education, experience, skills, } from "@/app/data";
+import { BsArrowUpRight } from "react-icons/bs";
+import Link from "next/link";
 
 const Resume = () => {
 
@@ -40,12 +42,17 @@ const Resume = () => {
                                             {experience.items.map((item, index) => {
                                                 return (
                                                     <li key={index} className="bg-white/5 h-[11.5rem] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1">
-                                                        <span className="text-accent">{item.duration}</span>
+                                                        <div className="w-full flex content-between text-accent">
+                                                            <span>{item.duration}</span>
+                                                            <Link href={item.path} target="_blank" className="w-[2rem] h-[2rem] ms-auto rounded-full flex justify-center items-center transition-all duration-500 hover:rotate-45">
+                                                                <BsArrowUpRight className="text-xl" />
+                                                            </Link>
+                                                        </div>
                                                         <h3 className="text-xl max-w-[16.25rem] min-h-[3.75rem] text-center lg:text-left">{item.position}</h3>
                                                         <div className="flex items-center gap-3">
                                                             {/* Dot */}
-                                                            <span className="w-[0.375rem] h-[0.375rem] rounded-full bg-accent"></span>
-                                                            <p className="text-white/60">{item.company}</p>
+                                                            <span className="w-[0.375rem] h-[0.375rem] rounded-full bg-white/60"></span>
+                                                            <p className="text-accent">{item.company}</p>
                                                         </div>
                                                     </li>
                                                 )
@@ -67,10 +74,11 @@ const Resume = () => {
                                     <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 xl:gap-[1.875rem]">
                                         {skills.skillsSet.map((skill, index) => {
                                             return (
-                                                <li key={index} className="">
+                                                <li key={index} className="relative mb-2 lg:mb-0 group">
+                                                    <div className="absolute bottom-0 left-0 w-full h-[3px] translate-y-2 bg-white/10 group-hover:bg-accent transition-all duration-300 "></div>
                                                     <TooltipProvider>
                                                         <Tooltip>
-                                                            <TooltipTrigger className="w-full h-[9.375rem] bg-white/5 rounded-xl flex items-center justify-center group">
+                                                            <TooltipTrigger className="w-full h-[9.375rem] flex items-center justify-center bg-white/5 group-hover:scale-95 transition-all duration-300 rounded-xl group">
                                                                 <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                                                     {skill.icon}
                                                                 </div>
