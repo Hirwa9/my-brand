@@ -16,16 +16,16 @@ const jetbrainsMono = JetBrains_Mono({
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Hirwa Cyuzuzo Willy | Developer Portfolio",
-  description: "Explore the innovative projects and expertise of Hirwa Cyuzuzo Willy, a skilled React Native and Tailwind CSS developer, delivering scalable solutions and creative designs.",
+  title: "Hirwa Cyuzuzo Willy | Portfolio",
+  description: "Explore the innovative projects and expertise of Hirwa Cyuzuzo Willy, a skilled Fullstack developer, delivering scalable solutions and creative designs.",
   authors: [{ name: "Hirwa Cyuzuzo Willy" }],
   keywords: [
     "Hirwa Cyuzuzo Willy",
     "Developer Portfolio",
     "React Native Developer",
     "Tailwind CSS Expert",
-    "Mobile App Development",
-    "UI/UX Design",
+    "Mobile App Developer",
+    "Website Developer",
     "Scalable Solutions"
   ],
   creator: "Hirwa Cyuzuzo Willy",
