@@ -1,0 +1,44 @@
+{
+    "short_name": "Hirwa Portfolio",
+    "name": "Hirwa Cyuzuzo Willy | Portfolio",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "48x48",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#313133",
+    "background_color": "#313133",
+    "screenshots": [
+        {
+            "src": "/assets/images/screenshot_sm.jpg",
+            "type": "image/jpg",
+            "sizes": "1080x2220",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "/assets/images/screenshot_lg.jpg",
+            "type": "image/jpg",
+            "sizes": "1896x875",
+            "form_factor": "wide"
+        }
+    ]
+}
