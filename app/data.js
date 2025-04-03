@@ -183,7 +183,6 @@ export const skills = {
         { icon: <SiNextdotjs />, name: 'NextJS' },
         { icon: <FaReact />, name: 'ReactJS' },
         { icon: <SiExpo />, name: 'Expo' },
-        { icon: <TbBrandReactNative />, name: 'React Native' },
         { icon: <FaAngular />, name: 'AngularJS' },
         { icon: <SiExpress />, name: 'Express' },
         { icon: <FaNodeJs />, name: 'NodeJS' },
