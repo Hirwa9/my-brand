@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { BsArrowDownRight } from "react-icons/bs";
 
 // Data
 import { services } from "@/app/data";
@@ -22,9 +20,9 @@ const Services = () => {
                                 {/* Numbering */}
                                 <div className="w-full flex justify-between items-center">
                                     <div className="text-5xl font-extrabold text-transparent text-outline group-hover:text-outline-hover transition-all duration-500">{index + 1 < 10 ? `0${index + 1}` : index + 1}</div>
-                                    <Link href={service.href} className="w-[4.375rem] h-[4.375rem] rounded-full flex justify-center items-center bg-white group-hover:bg-accent transition-all duration-500 hover:-rotate-45">
-                                        <BsArrowDownRight className="text-primary text-3xl" />
-                                    </Link>
+                                    <div className="w-[3.375rem] h-[3.375rem] rounded-full flex justify-center items-center bg-white group-hover:bg-accent text-gray-600 transition-all duration-500">
+                                        {service?.icon}
+                                    </div>
                                 </div>
                                 {/* Title */}
                                 <h2 className="text-[2.625rem] font-bold leading-none group-hover:text-accent transition-all duration-500">{service.title}</h2>
