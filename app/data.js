@@ -7,6 +7,10 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaNodeJs, FaPhp, FaHtml5, FaCss3, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiAxios, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiSass, SiExpo } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
+import { MdDevices } from "react-icons/md";
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+import { RiSeoLine } from "react-icons/ri";
+
 
 // Navigation routes
 export const routes = [
@@ -130,17 +134,17 @@ export const services = [
     {
         title: 'Web Development',
         description: 'Building stable, responsive and dynamic web solutions tailored to your needs.',
-        href: '',
+        icon: <MdDevices className="text-3xl" />,
     },
     {
         title: 'Mobile Development',
         description: 'Creating cross-platform and native mobile applications using cutting-edge technologies.',
-        href: '',
+        icon: <HiOutlineDevicePhoneMobile className="text-3xl" />,
     },
     {
         title: 'SEO',
         description: 'Optimizing your website for search engines to improve visibility and traffic.',
-        href: '',
+        icon: <RiSeoLine className="text-3xl" />,
     },
 ];
 
@@ -154,21 +158,25 @@ export const experience = {
             company: 'Ikimina Ingoboka',
             position: 'Fullstack Developer',
             duration: '2024 (4 mos)',
+            path: 'https://ingoboka-savings-management-system.onrender.com',
         },
         {
             company: 'Sam Real Estate',
             position: 'Fullstack Developer',
             duration: '2024 (5 mos)',
+            path: 'https://samrealestatee.com',
         },
         {
             company: 'Eliazar Ndayisabye',
             position: 'Freelancer Web Developer',
             duration: '2023 (2 mos)',
+            path: 'https://eliazarndayisabye.rf.gd/music.php',
         },
         {
             company: 'Eastern Singers Group',
             position: 'Web Developer',
             duration: '2022 (8 mos)',
+            path: 'https://esgrprwanda.com',
         },
     ]
 };
