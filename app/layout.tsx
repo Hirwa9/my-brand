@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +16,10 @@ const jetbrainsMono = JetBrains_Mono({
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Hirwa Cyuzuzo Willy | Portfolio",
+  title: {
+    template: `%s | Hirwa`,
+    default: "Hirwa Cyuzuzo Willy | Portfolio",
+  },
   description: "Explore the innovative projects and expertise of Hirwa Cyuzuzo Willy, a skilled Fullstack developer, delivering scalable solutions and creative designs.",
   authors: [{ name: "Hirwa Cyuzuzo Willy" }],
   keywords: [
@@ -30,10 +33,13 @@ export const metadata: Metadata = {
   ],
   creator: "Hirwa Cyuzuzo Willy",
   applicationName: "Hirwa | Portfolio",
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
-  themeColor: "#313133",
+  manifest: '/manifest.json',
 };
+
+export const viewport: Viewport = {
+  themeColor: "#313133",
+}
 
 // Root layout
 export default function RootLayout({
