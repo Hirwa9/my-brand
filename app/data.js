@@ -5,7 +5,6 @@
 
 // Icons
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaNodeJs, FaPhp, FaHtml5, FaCss3, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
-import { TbBrandReactNative } from 'react-icons/tb';
 import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiAxios, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiSass, SiExpo } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 
