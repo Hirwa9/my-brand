@@ -6,7 +6,7 @@
 // Icons
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaNodeJs, FaPhp, FaHtml5, FaCss3, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
-import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiAxios, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiSass } from 'react-icons/si';
+import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiAxios, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiSass, SiExpo } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 
 // Navigation routes
@@ -182,6 +182,7 @@ export const skills = {
     skillsSet: [
         { icon: <SiNextdotjs />, name: 'NextJS' },
         { icon: <FaReact />, name: 'ReactJS' },
+        { icon: <SiExpo />, name: 'Expo' },
         { icon: <TbBrandReactNative />, name: 'React Native' },
         { icon: <FaAngular />, name: 'AngularJS' },
         { icon: <SiExpress />, name: 'Express' },
