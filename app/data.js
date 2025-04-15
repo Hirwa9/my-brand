@@ -4,7 +4,7 @@
 // This file contains all the static data used to render the app's components
 
 // Icons
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaNodeJS, FaPhp, FaHtml5, FaCss3, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaPhp, FaHtml5, FaCss3, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiAxios, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiSass, SiExpo } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { MdDevices } from "react-icons/md";
@@ -192,7 +192,7 @@ export const skills = {
         { icon: <SiExpo />, name: 'Expo' },
         { icon: <FaAngular />, name: 'AngularJS' },
         { icon: <SiExpress />, name: 'Express' },
-        { icon: <FaNodeJS />, name: 'NodeJS' },
+        { icon: <FaNodeJs />, name: 'NodeJS' },
         { icon: <SiVite />, name: 'Vite' },
         { icon: <SiJavascript />, name: 'Javascript' },
         { icon: <SiTypescript />, name: 'Typescript' },
