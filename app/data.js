@@ -101,6 +101,15 @@ export const projects = [
         github: "https://github.com/Hirwa9/sam-real-estate",
     },
     {
+        category: "Native App",
+        title: "Movie App",
+        description: "A cross-platform movie app that allows users to search for movies and view their details.",
+        stack: ["Expo", "React Native", "TS", "Nativewind", "TMDB API"],
+        image: "/assets/work/project-images/movie_app_square.png",
+        live: "#",
+        github: "https://github.com/Hirwa9/movie-app",
+    },
+    {
         category: "Fullstack Web App",
         title: "Weather App",
         description: "An intuitive Weather App that provides accurate and up-to-date weather forecasts for any chosen region.",
