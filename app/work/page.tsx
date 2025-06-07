@@ -52,21 +52,20 @@ const Work = () => {
                                 {/* Buttons */}
                                 <div className="flex gap-4 items-center">
                                     {/* Live project button */}
-                                    <Link href={project.live} target="_blank">
-                                        <TooltipProvider delayDuration={100}>
-                                            <Tooltip>
-                                                <TooltipTrigger asChild className="w-[4.375rem] h-[4.375rem] rounded-full bg-white/5 flex justify-center items-center group">
-                                                    <BsArrowUpRight className="text-white text-3xl group-hover:text-accent p-4" />
-                                                    {/* <button className="btn btn-primary mt-6 flex items-center gap-2">
-                                                    Live demo
-                                                </button> */}
-                                                </TooltipTrigger>
-                                                <TooltipContent className="text-sm">
-                                                    <p>Live project</p>
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </Link>
+                                    {project.live !== "#" && (
+                                        <Link href={project.live} target="_blank">
+                                            <TooltipProvider delayDuration={100}>
+                                                <Tooltip>
+                                                    <TooltipTrigger asChild className="w-[4.375rem] h-[4.375rem] rounded-full bg-white/5 flex justify-center items-center group">
+                                                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent p-4" />
+                                                    </TooltipTrigger>
+                                                    <TooltipContent className="text-sm">
+                                                        <p>Live project</p>
+                                                    </TooltipContent>
+                                                </Tooltip>
+                                            </TooltipProvider>
+                                        </Link>
+                                    )}
 
                                     {/* Github project button */}
                                     <Link href={project.github} target="_blank">
@@ -74,9 +73,6 @@ const Work = () => {
                                             <Tooltip>
                                                 <TooltipTrigger asChild className="w-[4.375rem] h-[4.375rem] rounded-full bg-white/5 flex justify-center items-center group">
                                                     <BsGithub className="text-white text-3xl group-hover:text-accent p-4" />
-                                                    {/* <button className="btn btn-primary mt-6 flex items-center gap-2">
-                                                    Live demo
-                                                </button> */}
                                                 </TooltipTrigger>
                                                 <TooltipContent className="text-sm">
                                                     <p>Github repo</p>
