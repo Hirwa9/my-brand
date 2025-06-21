@@ -93,7 +93,6 @@ const Contact = () => {
             });
 
             const data = await sendContactForm(formData);
-            console.log(data);
 
             if (data.success) {
                 // Show success message
