@@ -266,7 +266,7 @@ export const stats = [
         text: "Technologies mastered",
     },
     {
-        num: 900,
-        text: "Code commints",
+        num: 1500,
+        text: "Code commits",
     },
 ];
