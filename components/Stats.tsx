@@ -18,6 +18,7 @@ const Stats = () => {
                                     <CountUp end={item.num} duration={5} delay={2} formattingFn={(val: number): string => convertCount({
                                         num: val,
                                         usePlusSign: [
+                                            "Projects completed",
                                             "Code commits",
                                             "Technologies mastered",
                                         ].includes(item.text)
