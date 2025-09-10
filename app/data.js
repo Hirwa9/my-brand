@@ -83,6 +83,15 @@ export const socials = [
 // Projects data
 export const projects = [
     {
+        category: "Native App",
+        title: "Netpipo mobile app",
+        description: "A cross-platform mobile app designed to simplify HR tasks for Rwandan businesses of different types and sizes",
+        stack: ["Expo", "React Native", "TS", "Nativewind"],
+        image: "/assets/work/project-images/netpipo_mobile_feature_graphic.png",
+        live: "https://play.google.com/store/apps/details?id=com.netpiporw.mobile",
+        github: "",
+    },
+    {
         category: "Fullstack Web App",
         title: "Ingoboka Savings Management System",
         description: "A platform for managing community groups savings, credit inquiries, and more financial transactions.",
@@ -164,6 +173,12 @@ export const experience = {
     description: 'So far, the projects and companies I have worked with, shaping my skills and expertise in the tech industry.',
     items: [
         {
+            company: 'ACR-Online Accounting Services',
+            position: 'Frontend Developer',
+            duration: '2025 (Current)',
+            path: 'https://netpipo.com',
+        },
+        {
             company: 'Ikimina Ingoboka',
             position: 'Fullstack Developer',
             duration: '2024 (4 mos)',
@@ -198,13 +213,13 @@ export const skills = {
     skillsSet: [
         { icon: <SiNextdotjs />, name: 'NextJS' },
         { icon: <FaReact />, name: 'ReactJS' },
-        { icon: <SiExpo />, name: 'Expo' },
+        { icon: <SiExpo />, name: 'Expo & R.Native' },
         { icon: <FaAngular />, name: 'AngularJS' },
         { icon: <SiExpress />, name: 'Express' },
         { icon: <FaNodeJs />, name: 'NodeJS' },
         { icon: <SiVite />, name: 'Vite' },
-        { icon: <SiJavascript />, name: 'Javascript' },
         { icon: <SiTypescript />, name: 'Typescript' },
+        { icon: <SiJavascript />, name: 'Javascript' },
         { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
         { icon: <SiBootstrap />, name: 'Bootstrap' },
         { icon: <GrMysql />, name: 'MySQL' },
@@ -266,7 +281,7 @@ export const stats = [
         text: "Technologies mastered",
     },
     {
-        num: 1500,
+        num: 3500,
         text: "Code commits",
     },
 ];
