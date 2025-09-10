@@ -44,9 +44,11 @@ const Resume = () => {
                                                     <li key={index} className="bg-white/5 h-[11.5rem] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1">
                                                         <div className="w-full flex content-between text-accent">
                                                             <span>{item.duration}</span>
-                                                            <Link href={item.path} target="_blank" className="w-[2rem] h-[2rem] ms-auto rounded-full flex justify-center items-center transition-all duration-500 hover:rotate-45">
-                                                                <BsArrowUpRight className="text-xl" />
-                                                            </Link>
+                                                            {item.path && (
+                                                                <Link href={item.path} target="_blank" className="w-[2rem] h-[2rem] ms-auto rounded-full flex justify-center items-center transition-all duration-500 hover:rotate-45">
+                                                                    <BsArrowUpRight className="text-xl" />
+                                                                </Link>
+                                                            )}
                                                         </div>
                                                         <h3 className="text-xl max-w-[16.25rem] min-h-[3.75rem] text-center lg:text-left">{item.position}</h3>
                                                         <div className="flex items-center gap-3">
