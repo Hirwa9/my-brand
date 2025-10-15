@@ -22,11 +22,11 @@ const Resume = () => {
                 <div className="container mx-auto">
                     <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[3.75rem]">
                         <div className='shrink-0 xl:w-fit'>
-                            <TabsList className="w-full flex flex-col max-w-[23.75rem] mx-auto xl:w-[23.75rem] xl:mx-0 xl:sticky xl:top-6 gap-6">
-                                <TabsTrigger value="experience">Experience</TabsTrigger>
-                                <TabsTrigger value="skills">Skills</TabsTrigger>
-                                <TabsTrigger value="education">Education</TabsTrigger>
-                                <TabsTrigger value="about">About me</TabsTrigger>
+                            <TabsList className="w-full flex xl:flex-col flex-wrap max-w-2xl mx-auto xl:min-w-[23.75rem] xl:mx-0 xl:sticky xl:top-6 gap-3 xl:gap-6">
+                                <TabsTrigger value="experience" className="w-[46%] xl:w-full">Experience</TabsTrigger>
+                                <TabsTrigger value="skills" className="w-[46%] xl:w-full">Skills</TabsTrigger>
+                                <TabsTrigger value="education" className="w-[46%] xl:w-full">Education</TabsTrigger>
+                                <TabsTrigger value="about" className="w-[46%] xl:w-full">About me</TabsTrigger>
                             </TabsList>
                         </div>
                         <div className="w-full min-h-[70vh]">
