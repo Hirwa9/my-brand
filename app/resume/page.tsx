@@ -16,7 +16,7 @@ const Resume = () => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
-            className="min-h-[80vh] flex flex-col justify-center py-12 xl:pt-0"
+            className="min-h-[80vh] flex flex-col justify-center pt-2 md:pt-12 pb-12 xl:pt-0"
         >
             <section>
                 <div className="container mx-auto">
