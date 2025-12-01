@@ -173,7 +173,7 @@ export const experience = {
     description: 'So far, the projects and companies I have worked with, shaping my skills and expertise in the tech industry.',
     items: [
         {
-            company: 'ACR-Online Accounting Services',
+            company: 'Netpipo',
             position: 'Frontend Developer',
             duration: '2025 (Current)',
             path: 'https://netpipo.com',
