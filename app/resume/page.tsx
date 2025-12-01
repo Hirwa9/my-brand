@@ -38,10 +38,10 @@ const Resume = () => {
                                         {experience.description}
                                     </p>
                                     <ScrollArea className="h-[25rem]">
-                                        <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[1.875rem]">
+                                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
                                             {experience.items.map((item, index) => {
                                                 return (
-                                                    <li key={index} className="bg-white/5 h-[11.5rem] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1">
+                                                    <li key={index} className="bg-white/5 h-[11.5rem] py-6 px-10 rounded-xl flex flex-col items-start justify-center gap-1">
                                                         <div className="w-full flex content-between text-accent">
                                                             <span>{item.duration}</span>
                                                             {item.path && (
@@ -50,8 +50,8 @@ const Resume = () => {
                                                                 </Link>
                                                             )}
                                                         </div>
-                                                        <h3 className="text-xl max-w-[16.25rem] min-h-[3.75rem] text-center lg:text-left">{item.position}</h3>
-                                                        <div className="flex items-center gap-3">
+                                                        <h3 className="text-xl mb-4">{item.position}</h3>
+                                                        <div className="flex items-center gap-3 ps-3">
                                                             {/* Dot */}
                                                             <span className="w-[0.375rem] h-[0.375rem] rounded-full bg-white/60"></span>
                                                             <p className="text-accent">{item.company}</p>
