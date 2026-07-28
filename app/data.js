@@ -175,14 +175,14 @@ export const experience = {
         {
             company: 'Netpipo',
             position: 'Frontend Developer',
-            duration: '2025 (Current)',
-            path: 'https://netpipo.com',
+            duration: '2025 (1yr 3mos)',
+            path: 'https://hr.netpipo.com',
         },
         {
             company: 'Ikimina Ingoboka',
             position: 'Fullstack Developer',
             duration: '2024 (4 mos)',
-            path: 'https://ingoboka-savings-management-system.onrender.com',
+            path: 'https://ikimina-ingoboka.com',
         },
         {
             company: 'Sam Real Estate',
