@@ -93,7 +93,7 @@ export const projects = [
     },
     {
         category: "Native App",
-        title: "Netpipo mobile app",
+        title: "Catholic Music app",
         description: "A cross-platform mobile app designed to bring together a growing library of Catholic song notations. Users can discover compositions, build setlists, and connect with musicians.",
         stack: ["Expo", "React Native", "TS", "Nativewind", "PostgreSQL", "Supabase"],
         image: "/assets/work/project-images/catholic_music_mobile_feature_graphic.jpg",
