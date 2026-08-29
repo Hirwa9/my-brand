@@ -136,15 +136,15 @@ export const projects = [
         live: "https://weather-app-b41p.onrender.com",
         github: "https://github.com/Hirwa9/weather-app",
     },
-    {
-        category: "Web Development",
-        title: "Eliazar's personal website",
-        description: "A composer's personal website showcasing their music and portfolio content.",
-        stack: ["PHP", "Ajax", "MySQL", "jQuery", "JS", "HTML", "BS5"],
-        image: "/assets/work/project-images/eliazar_music_landscape.png",
-        live: "https://eliazarndayisabye.rf.gd/music.php",
-        github: "https://github.com/Hirwa9/Eliazar-Website",
-    },
+    // {
+    //     category: "Web Development",
+    //     title: "Eliazar's personal website",
+    //     description: "A composer's personal website showcasing their music and portfolio content.",
+    //     stack: ["PHP", "Ajax", "MySQL", "jQuery", "JS", "HTML", "BS5"],
+    //     image: "/assets/work/project-images/eliazar_music_landscape.png",
+    //     live: "https://eliazarndayisabye.rf.gd/music.php",
+    //     github: "https://github.com/Hirwa9/Eliazar-Website",
+    // },
     {
         category: "Web Development",
         title: "Eastern Singers Group (ESG) website",
@@ -199,12 +199,12 @@ export const experience = {
             duration: '2024 (5 mos)',
             path: 'https://samrealestatee.com',
         },
-        {
-            company: 'Eliazar Ndayisabye',
-            position: 'Freelancer Web Developer',
-            duration: '2023 (2 mos)',
-            path: 'https://eliazarndayisabye.rf.gd/music.php',
-        },
+        // {
+        //     company: 'Eliazar Ndayisabye',
+        //     position: 'Freelancer Web Developer',
+        //     duration: '2023 (2 mos)',
+        //     path: 'https://eliazarndayisabye.rf.gd/music.php',
+        // },
         {
             company: 'Eastern Singers Group',
             position: 'Web Developer',
