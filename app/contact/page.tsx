@@ -30,8 +30,7 @@ const Contact = () => {
 
     // Form data
     const [formData, setFormData] = useState({
-        firstname: "",
-        lastname: "",
+        name: "",
         email: "",
         phone: "",
         service: "Web Development",
@@ -43,8 +42,7 @@ const Contact = () => {
 
     const resetForm = () => {
         setFormData({
-            firstname: "",
-            lastname: "",
+            name: "",
             email: "",
             phone: "",
             service: "Web Development",
@@ -62,7 +60,7 @@ const Contact = () => {
         const inputName = (e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement).name;
 
         switch (inputName) {
-            case "firstname":
+            case "name":
                 notify({ message: "Please provide your name so that we can address you properly." });
                 break;
             case "email":
@@ -146,8 +144,7 @@ const Contact = () => {
                             <h3 className="text-4xl text-accent">Let&#39;s work together</h3>
                             <p className="text-white/60">Get in touch to discuss your project needs and bring your ideas to life.</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input name="firstname" value={formData.firstname} onChange={handleChange} type="text" placeholder="Firstname" required onInvalid={handleInvalid} />
-                                <Input name="lastname" value={formData.lastname} onChange={handleChange} type="text" placeholder="Lastname" />
+                                <Input name="name" value={formData.name} onChange={handleChange} type="text" placeholder="Full name" autoComplete="name" required onInvalid={handleInvalid} className="md:col-span-2" />
                                 <Input name="email" value={formData.email} onChange={handleChange} type="email" placeholder="Email Address" required onInvalid={handleInvalid} />
                                 <Input name="phone" value={formData.phone} onChange={handleChange} type="text" placeholder="Phone Number" required onInvalid={handleInvalid} />
                             </div>

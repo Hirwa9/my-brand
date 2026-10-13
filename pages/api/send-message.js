@@ -5,10 +5,11 @@
 import { mailOptions, transporter } from "../../config/nodemailer";
 
 // Utility function to create text template
-const createTextTemplate = ({ firstname, lastname, phone, service, message }) => {
+const createTextTemplate = ({ name, email, phone, service, message }) => {
     return `
-        New contact request from ${firstname} ${lastname}:
+        New contact request from ${name}:
         Service: ${service}
+        Email: ${email}
         Phone: ${phone}
         
         Message:
@@ -19,11 +20,12 @@ const createTextTemplate = ({ firstname, lastname, phone, service, message }) =>
 };
 
 // Utility function to create HTML template
-const createHTMLTemplate = ({ firstname, lastname, phone, service, message }) => {
+const createHTMLTemplate = ({ name, email, phone, service, message }) => {
     return `
         <h1>New Contact Request</h1>
-        <p><strong>Name:</strong> ${firstname} ${lastname}</p>
+        <p><strong>Name:</strong> ${name}</p>
         <p><strong>Service:</strong> ${service}</p>
+        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong></p>
         <div style="margin-top: 10px; padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9;">
@@ -35,10 +37,10 @@ const createHTMLTemplate = ({ firstname, lastname, phone, service, message }) =>
 // Main handler function
 const sendMessage = async (req, res) => {
     if (req.method === "POST") {
-        const { firstname, lastname, email, phone, service, message } = req.body;
+        const { name, email, phone, service, message } = req.body;
 
         // Validate the input
-        if (!firstname || !lastname || !email || !phone || !service || !message) {
+        if (!name || !email || !phone || !service || !message) {
             return res.status(400).json({ success: false, message: "All fields are required." });
         }
 
@@ -46,9 +48,10 @@ const sendMessage = async (req, res) => {
             // Send the email
             await transporter.sendMail({
                 ...mailOptions,
+                replyTo: { name, address: email }, // So "Reply" goes to the sender
                 subject: `Portfolio message: ${service}`,
-                text: createTextTemplate({ firstname, lastname, phone, service, message }), // Use text template
-                html: createHTMLTemplate({ firstname, lastname, phone, service, message }), // Use HTML template
+                text: createTextTemplate({ name, email, phone, service, message }), // Use text template
+                html: createHTMLTemplate({ name, email, phone, service, message }), // Use HTML template
             });
 
             res.status(200).json({ success: true, message: "Message sent successfully!" });
