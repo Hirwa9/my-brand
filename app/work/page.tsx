@@ -7,12 +7,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
+import { IconType } from "react-icons";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useState } from "react";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 // Data
 import { projects } from "@/app/data";
+
+type Project = (typeof projects)[number];
+
+// Links shown under a project: live site (or Google Play), App Store, and GitHub
+const getProjectLinks = (project: Project) => {
+    const links: { href: string; label: string; icon: IconType }[] = [];
+    const isSet = (url?: string): url is string => !!url && url !== "#";
+
+    if (isSet(project.live)) {
+        const isPlayStore = project.live.includes("play.google.com");
+        links.push({ href: project.live, label: isPlayStore ? "Google Play" : "Live project", icon: isPlayStore ? FaGooglePlay : BsArrowUpRight });
+    }
+    if (isSet(project.appStore)) links.push({ href: project.appStore, label: "App Store", icon: FaApple });
+    if (isSet(project.github)) links.push({ href: project.github, label: "Github repo", icon: BsGithub });
+
+    return links;
+};
 
 const Work = () => {
     const [project, setProject] = useState(projects[0]);
@@ -51,37 +70,20 @@ const Work = () => {
 
                                 {/* Buttons */}
                                 <div className="flex gap-4 items-center">
-                                    {/* Live project button */}
-                                    {(project.live && project.live !== "#") && (
-                                        <Link href={project.live} target="_blank">
+                                    {getProjectLinks(project).map(({ href, label, icon: Icon }) => (
+                                        <Link key={label} href={href} target="_blank">
                                             <TooltipProvider delayDuration={100}>
                                                 <Tooltip>
                                                     <TooltipTrigger asChild className="w-[4.375rem] h-[4.375rem] rounded-full bg-white/5 flex justify-center items-center group">
-                                                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent p-4" />
+                                                        <Icon className="text-white text-3xl group-hover:text-accent p-4" />
                                                     </TooltipTrigger>
                                                     <TooltipContent className="text-sm">
-                                                        <p>Live project</p>
+                                                        <p>{label}</p>
                                                     </TooltipContent>
                                                 </Tooltip>
                                             </TooltipProvider>
                                         </Link>
-                                    )}
-
-                                    {/* Github project button */}
-                                    {(project.github && project.github !== "#") && (
-                                        <Link href={project.github} target="_blank">
-                                            <TooltipProvider delayDuration={100}>
-                                                <Tooltip>
-                                                    <TooltipTrigger asChild className="w-[4.375rem] h-[4.375rem] rounded-full bg-white/5 flex justify-center items-center group">
-                                                        <BsGithub className="text-white text-3xl group-hover:text-accent p-4" />
-                                                    </TooltipTrigger>
-                                                    <TooltipContent className="text-sm">
-                                                        <p>Github repo</p>
-                                                    </TooltipContent>
-                                                </Tooltip>
-                                            </TooltipProvider>
-                                        </Link>
-                                    )}
+                                    ))}
                                 </div>
                             </div>
                         </div>

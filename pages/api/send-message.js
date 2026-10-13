@@ -4,6 +4,15 @@
 
 import { mailOptions, transporter } from "../../config/nodemailer";
 
+// Escape user input before placing it in the HTML email
+const escapeHtml = (value = "") =>
+    String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+
 // Utility function to create text template
 const createTextTemplate = ({ name, email, phone, service, message }) => {
     return `
@@ -20,7 +29,11 @@ const createTextTemplate = ({ name, email, phone, service, message }) => {
 };
 
 // Utility function to create HTML template
-const createHTMLTemplate = ({ name, email, phone, service, message }) => {
+const createHTMLTemplate = (fields) => {
+    const [name, email, phone, service] = [fields.name, fields.email, fields.phone, fields.service].map(escapeHtml);
+    // Keep the sender's line breaks
+    const message = escapeHtml(fields.message).replace(/\r?\n/g, "<br />");
+
     return `
         <h1>New Contact Request</h1>
         <p><strong>Name:</strong> ${name}</p>

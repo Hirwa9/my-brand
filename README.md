@@ -15,8 +15,10 @@ This is my personal portfolio, where I showcase my skills, projects, and profess
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: NextJS, Tailwind CSS
-- **Other Tools**: TypeScript, Vercel CI/CD
+- **Framework**: Next.js (App Router), React, TypeScript
+- **Styling & UI**: Tailwind CSS, Radix UI, Framer Motion, Swiper
+- **Contact form**: Next.js API route + Nodemailer
+- **Deployment**: Vercel CI/CD
 
 ---
 
@@ -35,4 +37,4 @@ Feel free to reach out for collaborations or inquiries:
 
 ---
 
-Rate the interesting work from portfolio!
+Live at **[hirwa-portfolio.vercel.app](https://hirwa-portfolio.vercel.app)**.

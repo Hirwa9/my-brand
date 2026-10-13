@@ -12,6 +12,9 @@ import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { RiSeoLine } from "react-icons/ri";
 
 
+// Live site URL (used for metadata, sitemap and robots)
+export const siteUrl = 'https://hirwa-portfolio.vercel.app';
+
 // Career start year (first professional role: Eastern Singers Group, 2022)
 export const careerStartYear = 2022;
 const yearsOfExperience = new Date().getFullYear() - careerStartYear;
@@ -79,7 +82,7 @@ export const info = [
 // Social media data
 export const socials = [
     { name: 'Github', icon: <FaGithub className='size-6' />, path: 'https://github.com/Hirwa9', },
-    { name: 'LinkedIn', icon: <FaLinkedin className='size-6' />, path: 'http://linkedin.com/in/hirwa-cyuzuzo-willy-94159427b', },
+    { name: 'LinkedIn', icon: <FaLinkedin className='size-6' />, path: 'https://www.linkedin.com/in/hirwa-cyuzuzo-willy-94159427b', },
     { name: 'Instagram', icon: <FaInstagram className='size-6' />, path: 'https://www.instagram.com/hirwa__willy', },
     // Hidden for now; to restore, also re-add FaFacebook to the 'react-icons/fa' import above
     // { name: 'Facebook', icon: <FaFacebook className='size-6' />, path: 'https://www.facebook.com/profile.php?id=100009250550394', },
@@ -94,6 +97,7 @@ export const projects = [
         stack: ["Expo", "React Native", "TS", "Nativewind"],
         image: "/assets/work/project-images/netpipo_mobile_feature_graphic.png",
         live: "https://play.google.com/store/apps/details?id=com.netpiporw.mobile",
+        appStore: "https://apps.apple.com/us/app/netpipo/id6753170634",
         github: "",
     },
     {
