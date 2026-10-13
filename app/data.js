@@ -4,8 +4,8 @@
 // This file contains all the static data used to render the app's components
 
 // Icons
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaPhp, FaHtml5, FaCss3, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaNodeJs } from 'react-icons/fa';
-import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiAxios, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiSass, SiExpo } from 'react-icons/si';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaPhp, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaNodeJs } from 'react-icons/fa';
+import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiExpo, SiPython, SiDjango, SiShadcnui, SiReactquery, SiZod, SiPrisma, SiSupabase, SiJest, SiNginx, SiAmazons3 } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { MdDevices } from "react-icons/md";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
@@ -220,34 +220,40 @@ export const skills = {
     title: 'My tech stack',
     description: 'The tools that have become indispensable to me, serving as the foundation for tackling any project that I work on.',
     skillsSet: [
+        { icon: <SiTypescript />, name: 'Typescript' },
+        { icon: <SiJavascript />, name: 'Javascript' },
+        { icon: <SiPython />, name: 'Python' },
         { icon: <SiNextdotjs />, name: 'NextJS' },
         { icon: <FaReact />, name: 'ReactJS' },
         { icon: <SiExpo />, name: 'Expo & R.Native' },
-        { icon: <FaAngular />, name: 'AngularJS' },
-        { icon: <SiExpress />, name: 'Express' },
+        { icon: <SiDjango />, name: 'Django & DRF' },
         { icon: <FaNodeJs />, name: 'NodeJS' },
-        { icon: <SiVite />, name: 'Vite' },
-        { icon: <SiTypescript />, name: 'Typescript' },
-        { icon: <SiJavascript />, name: 'Javascript' },
+        { icon: <SiExpress />, name: 'Express' },
         { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
-        { icon: <SiBootstrap />, name: 'Bootstrap' },
-        { icon: <GrMysql />, name: 'MySQL' },
+        { icon: <SiShadcnui />, name: 'shadcn/ui' },
+        { icon: <SiReactquery />, name: 'TanStack Query' },
+        { icon: <SiZod />, name: 'Zod' },
+        { icon: <SiPrisma />, name: 'Prisma' },
+        { icon: <SiSupabase />, name: 'Supabase' },
         { icon: <SiPostgresql />, name: 'PostgreSQL' },
-        { icon: <SiAxios />, name: 'Axios' },
+        { icon: <GrMysql />, name: 'MySQL' },
         { icon: <SiSequelize />, name: 'Sequelize' },
-        { icon: <SiGraphql />, name: 'GraphQL' },
-        { icon: <SiDocker />, name: 'Docker' },
         { icon: <SiJsonwebtokens />, name: 'JSON Web Tokens' },
+        { icon: <SiJest />, name: 'Jest' },
+        { icon: <SiVite />, name: 'Vite' },
+        { icon: <SiNginx />, name: 'Nginx' },
+        { icon: <SiAmazons3 />, name: 'AWS S3' },
+        { icon: <SiDocker />, name: 'Docker' },
+        { icon: <SiGraphql />, name: 'GraphQL' },
         { icon: <SiFirebase />, name: 'Firebase' },
         { icon: <FaPhp />, name: 'PHP' },
-        { icon: <SiSass />, name: 'Sass' },
-        { icon: <FaHtml5 />, name: 'HTML 5' },
-        { icon: <FaCss3 />, name: 'CSS' },
-        { icon: <SiGithub />, name: 'Github' },
+        { icon: <SiBootstrap />, name: 'Bootstrap' },
+        { icon: <FaAngular />, name: 'AngularJS' },
         { icon: <SiGit />, name: 'Git' },
+        { icon: <SiGithub />, name: 'Github' },
         { icon: <FaLinux />, name: 'Linux' },
-        { icon: <SiRender />, name: 'Render CI/CD' },
         { icon: <SiVercel />, name: 'Vercel CI/CD' },
+        { icon: <SiRender />, name: 'Render CI/CD' },
     ]
 };
 
@@ -290,7 +296,7 @@ export const stats = [
         text: "Technologies mastered",
     },
     {
-        num: 7500,
+        num: 8500,
         text: "Code commits",
     },
 ];
