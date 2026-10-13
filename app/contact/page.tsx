@@ -81,9 +81,10 @@ const Contact = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        let loadingToast: string | undefined;
         try {
             setIsLoading(true);
-            const loadingToast = toast.loading("Sending message...", {
+            loadingToast = toast.loading("Sending message...", {
                 style: {
                     backgroundColor: '#71b3b3',
                     color: '#fff',
@@ -103,6 +104,8 @@ const Contact = () => {
                 });
                 // Dismiss loading toast
                 if (loadingToast) toast.dismiss(loadingToast);
+                // Only clear the form once the message is sent
+                resetForm();
             } else {
                 // Show error message
                 toast.error("Sorry! Something went wrong. Please try again.", {
@@ -114,9 +117,9 @@ const Contact = () => {
                 // Dismiss loading toast
                 if (loadingToast) toast.dismiss(loadingToast);
             }
-            resetForm();
         } catch (error) {
             console.error(error);
+            if (loadingToast) toast.dismiss(loadingToast);
             toast.error("Sorry! Something went wrong. Please try again.", {
                 style: {
                     backgroundColor: '#b30000',
@@ -132,7 +135,7 @@ const Contact = () => {
     return (
         <motion.section
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
+            animate={{ opacity: 1, transition: { delay: 0.8, duration: 0.4, ease: 'easeIn' } }}
             className="py-6"
         >
             <Toaster />
@@ -146,7 +149,7 @@ const Contact = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <Input name="name" value={formData.name} onChange={handleChange} type="text" placeholder="Full name" autoComplete="name" required onInvalid={handleInvalid} className="md:col-span-2" />
                                 <Input name="email" value={formData.email} onChange={handleChange} type="email" placeholder="Email Address" required onInvalid={handleInvalid} />
-                                <Input name="phone" value={formData.phone} onChange={handleChange} type="text" placeholder="Phone Number" required onInvalid={handleInvalid} />
+                                <Input name="phone" value={formData.phone} onChange={handleChange} type="text" placeholder="Phone Number (optional)" autoComplete="tel" />
                             </div>
                             <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
                                 <SelectTrigger className="w-full">
@@ -154,7 +157,8 @@ const Contact = () => {
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup>
-                                        <SelectLabel>Select a service</SelectLabel>
+                                        <SelectLabel>What is this about?</SelectLabel>
+                                        <SelectItem value="Job opportunity / Hiring">Job opportunity / Hiring</SelectItem>
                                         <SelectItem value="Web Development">Web Development</SelectItem>
                                         <SelectItem value="Mobile Development">Mobile Development</SelectItem>
                                         <SelectItem value="SEO">SEO</SelectItem>

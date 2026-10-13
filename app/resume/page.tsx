@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 // Data
@@ -15,7 +14,7 @@ const Resume = () => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
+            animate={{ opacity: 1, transition: { delay: 0.8, duration: 0.4, ease: 'easeIn' } }}
             className="min-h-[80vh] flex flex-col justify-center pt-2 md:pt-12 pb-12 xl:pt-0"
         >
             <section>
@@ -41,7 +40,7 @@ const Resume = () => {
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
                                             {experience.items.map((item, index) => {
                                                 return (
-                                                    <li key={index} className="bg-white/5 h-[11.5rem] py-6 px-10 rounded-xl flex flex-col items-start justify-center gap-1">
+                                                    <li key={index} className="bg-white/5 py-6 px-8 xl:px-10 rounded-xl flex flex-col items-start gap-1 text-left">
                                                         <div className="w-full flex content-between text-accent">
                                                             <span>{item.duration}</span>
                                                             {item.path && (
@@ -50,12 +49,22 @@ const Resume = () => {
                                                                 </Link>
                                                             )}
                                                         </div>
-                                                        <h3 className="text-xl mb-4">{item.position}</h3>
-                                                        <div className="flex items-center gap-3 ps-3">
+                                                        <h3 className="text-xl">{item.position}</h3>
+                                                        <div className="flex items-center gap-3 mb-3">
                                                             {/* Dot */}
                                                             <span className="w-[0.375rem] h-[0.375rem] rounded-full bg-white/60"></span>
                                                             <p className="text-accent">{item.company}</p>
                                                         </div>
+                                                        {item.highlights && (
+                                                            <ul className="flex flex-col gap-2 text-sm text-white/70 leading-snug">
+                                                                {item.highlights.map((highlight, i) => (
+                                                                    <li key={i} className="flex gap-2">
+                                                                        <span className="text-accent">&#8250;</span>
+                                                                        <span>{highlight}</span>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        )}
                                                     </li>
                                                 )
                                             })}
@@ -73,27 +82,28 @@ const Resume = () => {
                                             {skills.description}
                                         </p>
                                     </div>
-                                    <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 xl:gap-[1.875rem]">
-                                        {skills.skillsSet.map((skill, index) => {
-                                            return (
-                                                <li key={index} className="relative mb-2 lg:mb-0 group">
-                                                    <div className="absolute bottom-0 left-0 w-full h-[3px] translate-y-2 bg-white/10 group-hover:bg-accent transition-all duration-300 "></div>
-                                                    <TooltipProvider>
-                                                        <Tooltip>
-                                                            <TooltipTrigger className="w-full h-[9.375rem] flex items-center justify-center bg-white/5 group-hover:scale-95 transition-all duration-300 rounded-xl group">
-                                                                <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                                                    {skill.icon}
+                                    <ScrollArea className="h-[25rem]">
+                                        <div className="flex flex-col gap-8 pe-4">
+                                            {skills.groups.map((group) => (
+                                                <div key={group.title} className="flex flex-col gap-4">
+                                                    <h4 className="text-lg text-accent text-center xl:text-left">{group.title}</h4>
+                                                    <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 xl:gap-4">
+                                                        {group.items.map((skill) => (
+                                                            <li key={skill.name} className="relative mb-2 group">
+                                                                <div className="absolute bottom-0 left-0 w-full h-[3px] translate-y-2 bg-white/10 group-hover:bg-accent transition-all duration-300"></div>
+                                                                <div className="w-full h-[6.5rem] flex flex-col items-center justify-center gap-2 bg-white/5 group-hover:scale-95 transition-all duration-300 rounded-xl px-1">
+                                                                    <div className="text-4xl group-hover:text-accent transition-all duration-300">
+                                                                        {skill.icon}
+                                                                    </div>
+                                                                    <p className="text-xs text-white/70 text-center leading-tight">{skill.name}</p>
                                                                 </div>
-                                                            </TooltipTrigger>
-                                                            <TooltipContent>
-                                                                <p>{skill.name}</p>
-                                                            </TooltipContent>
-                                                        </Tooltip>
-                                                    </TooltipProvider>
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </ScrollArea>
                                 </div>
                             </TabsContent>
 

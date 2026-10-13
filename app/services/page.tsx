@@ -11,7 +11,7 @@ const Services = () => {
             <div className="container mx-auto">
                 <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
+                    animate={{ opacity: 1, transition: { delay: 0.8, duration: 0.4, ease: 'easeIn' } }}
                     className="grid grid-cols-1 md:grid-cols-2 gap-[3.75rem]"
                 >
                     {services.map((service, index) => {

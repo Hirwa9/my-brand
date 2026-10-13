@@ -15,7 +15,7 @@ const Stats = () => {
                         return (
                             <div key={index} className="flex-1 md:flex items-center justify-start gap-4">
                                 <div className="text-4xl xl:text-6xl font-extrabold text-nowrap">
-                                    <CountUp end={item.num} duration={5} delay={2} formattingFn={(val: number): string => convertCount({
+                                    <CountUp end={item.num} duration={3} delay={1} formattingFn={(val: number): string => convertCount({
                                         num: val,
                                         usePlusSign: [
                                             "Projects completed",

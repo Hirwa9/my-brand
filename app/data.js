@@ -12,6 +12,10 @@ import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { RiSeoLine } from "react-icons/ri";
 
 
+// Career start year (first professional role: Eastern Singers Group, 2022)
+export const careerStartYear = 2022;
+const yearsOfExperience = new Date().getFullYear() - careerStartYear;
+
 // Navigation routes
 export const routes = [
     { name: 'home', path: '/', },
@@ -24,7 +28,7 @@ export const routes = [
 // About data
 export const about = {
     title: 'About me',
-    description: "I'm a passionate fullstack developer, with a keen eye for design and digital solutions development.",
+    description: "I'm a fullstack and mobile developer based in Kigali. I build products end to end: Django and Node.js APIs, Next.js and React web apps, and React Native apps shipped to Google Play. I care about clean architecture, polished UI and software that real businesses rely on every day.",
     info: [
         {
             fieldName: "Names",
@@ -36,7 +40,7 @@ export const about = {
         },
         {
             fieldName: "Experience",
-            fieldValue: `${new Date().getFullYear() - 1 - 2021}+ Years`,
+            fieldValue: `${yearsOfExperience}+ Years`,
         },
         {
             fieldName: "Nationality",
@@ -186,18 +190,33 @@ export const experience = {
             position: 'Frontend Developer',
             duration: '2025 (1yr 3mos)',
             path: 'https://hr.netpipo.com',
+            highlights: [
+                'Cross-platform HR app for Rwandan businesses, live on the App Store and Google Play',
+                'Attendance tracking, HR requests, team chat and employee management in one place',
+                'Works hand in hand with the Netpipo HR web platform',
+            ],
         },
         {
             company: 'Ikimina Ingoboka',
             position: 'Fullstack Developer',
             duration: '2024 (4 mos)',
             path: 'https://ikimina-ingoboka.com',
+            highlights: [
+                'Savings, loans and credit tracking for community savings groups',
+                'Separate admin and member spaces with role-based access',
+                'Automated reminders and email notifications',
+            ],
         },
         {
             company: 'Sam Real Estate',
             position: 'Fullstack Developer',
             duration: '2024 (5 mos)',
             path: 'https://samrealestatee.com',
+            highlights: [
+                'Property platform for buying, selling and renting in Kigali',
+                'Admin dashboard for listings, blog posts and client inquiries',
+                'Optimized property photo uploads and secure user accounts',
+            ],
         },
         // {
         //     company: 'Eliazar Ndayisabye',
@@ -210,6 +229,10 @@ export const experience = {
             position: 'Web Developer',
             duration: '2022 (8 mos)',
             path: 'https://esgrprwanda.com',
+            highlights: [
+                "The group's online home, with events and a searchable library of Catholic Mass songs",
+                'Admin area for publishing songs, events and liturgy documents',
+            ],
         },
     ]
 };
@@ -219,41 +242,66 @@ export const skills = {
     icon: '/assets/resume/cap.svg',
     title: 'My tech stack',
     description: 'The tools that have become indispensable to me, serving as the foundation for tackling any project that I work on.',
-    skillsSet: [
-        { icon: <SiTypescript />, name: 'Typescript' },
-        { icon: <SiJavascript />, name: 'Javascript' },
-        { icon: <SiPython />, name: 'Python' },
-        { icon: <SiNextdotjs />, name: 'NextJS' },
-        { icon: <FaReact />, name: 'ReactJS' },
-        { icon: <SiExpo />, name: 'Expo & R.Native' },
-        { icon: <SiDjango />, name: 'Django & DRF' },
-        { icon: <FaNodeJs />, name: 'NodeJS' },
-        { icon: <SiExpress />, name: 'Express' },
-        { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
-        { icon: <SiShadcnui />, name: 'shadcn/ui' },
-        { icon: <SiReactquery />, name: 'TanStack Query' },
-        { icon: <SiZod />, name: 'Zod' },
-        { icon: <SiPrisma />, name: 'Prisma' },
-        { icon: <SiSupabase />, name: 'Supabase' },
-        { icon: <SiPostgresql />, name: 'PostgreSQL' },
-        { icon: <GrMysql />, name: 'MySQL' },
-        { icon: <SiSequelize />, name: 'Sequelize' },
-        { icon: <SiJsonwebtokens />, name: 'JSON Web Tokens' },
-        { icon: <SiJest />, name: 'Jest' },
-        { icon: <SiVite />, name: 'Vite' },
-        { icon: <SiNginx />, name: 'Nginx' },
-        { icon: <SiAmazons3 />, name: 'AWS S3' },
-        { icon: <SiDocker />, name: 'Docker' },
-        { icon: <SiGraphql />, name: 'GraphQL' },
-        { icon: <SiFirebase />, name: 'Firebase' },
-        { icon: <FaPhp />, name: 'PHP' },
-        { icon: <SiBootstrap />, name: 'Bootstrap' },
-        { icon: <FaAngular />, name: 'AngularJS' },
-        { icon: <SiGit />, name: 'Git' },
-        { icon: <SiGithub />, name: 'Github' },
-        { icon: <FaLinux />, name: 'Linux' },
-        { icon: <SiVercel />, name: 'Vercel CI/CD' },
-        { icon: <SiRender />, name: 'Render CI/CD' },
+    groups: [
+        {
+            title: 'Languages',
+            items: [
+                { icon: <SiTypescript />, name: 'Typescript' },
+                { icon: <SiJavascript />, name: 'Javascript' },
+                { icon: <SiPython />, name: 'Python' },
+                { icon: <FaPhp />, name: 'PHP' },
+            ],
+        },
+        {
+            title: 'Frontend & Mobile',
+            items: [
+                { icon: <SiNextdotjs />, name: 'NextJS' },
+                { icon: <FaReact />, name: 'ReactJS' },
+                { icon: <SiExpo />, name: 'Expo & R.Native' },
+                { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
+                { icon: <SiShadcnui />, name: 'shadcn/ui' },
+                { icon: <SiReactquery />, name: 'TanStack Query' },
+                { icon: <SiVite />, name: 'Vite' },
+                { icon: <SiBootstrap />, name: 'Bootstrap' },
+                { icon: <FaAngular />, name: 'AngularJS' },
+            ],
+        },
+        {
+            title: 'Backend',
+            items: [
+                { icon: <SiDjango />, name: 'Django & DRF' },
+                { icon: <FaNodeJs />, name: 'NodeJS' },
+                { icon: <SiExpress />, name: 'Express' },
+                { icon: <SiJsonwebtokens />, name: 'JSON Web Tokens' },
+                { icon: <SiZod />, name: 'Zod' },
+                { icon: <SiGraphql />, name: 'GraphQL' },
+                { icon: <SiFirebase />, name: 'Firebase' },
+                { icon: <SiJest />, name: 'Jest' },
+            ],
+        },
+        {
+            title: 'Databases',
+            items: [
+                { icon: <SiPostgresql />, name: 'PostgreSQL' },
+                { icon: <GrMysql />, name: 'MySQL' },
+                { icon: <SiPrisma />, name: 'Prisma' },
+                { icon: <SiSequelize />, name: 'Sequelize' },
+                { icon: <SiSupabase />, name: 'Supabase' },
+            ],
+        },
+        {
+            title: 'DevOps & Tools',
+            items: [
+                { icon: <SiDocker />, name: 'Docker' },
+                { icon: <SiNginx />, name: 'Nginx' },
+                { icon: <SiAmazons3 />, name: 'AWS S3' },
+                { icon: <SiGit />, name: 'Git' },
+                { icon: <SiGithub />, name: 'Github' },
+                { icon: <FaLinux />, name: 'Linux' },
+                { icon: <SiVercel />, name: 'Vercel CI/CD' },
+                { icon: <SiRender />, name: 'Render CI/CD' },
+            ],
+        },
     ]
 };
 
@@ -284,7 +332,7 @@ export const education = {
 // Stats data
 export const stats = [
     {
-        num: new Date().getFullYear() - 2021,
+        num: yearsOfExperience,
         text: "Years of experience",
     },
     {
@@ -292,7 +340,7 @@ export const stats = [
         text: "Projects completed",
     },
     {
-        num: 8,
+        num: 20,
         text: "Technologies mastered",
     },
     {

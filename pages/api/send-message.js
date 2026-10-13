@@ -10,7 +10,7 @@ const createTextTemplate = ({ name, email, phone, service, message }) => {
         New contact request from ${name}:
         Service: ${service}
         Email: ${email}
-        Phone: ${phone}
+        Phone: ${phone || "Not provided"}
         
         Message:
         --------------------
@@ -26,7 +26,7 @@ const createHTMLTemplate = ({ name, email, phone, service, message }) => {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Service:</strong> ${service}</p>
         <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
         <p><strong>Message:</strong></p>
         <div style="margin-top: 10px; padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9;">
             <p>${message}</p>
@@ -40,8 +40,8 @@ const sendMessage = async (req, res) => {
         const { name, email, phone, service, message } = req.body;
 
         // Validate the input
-        if (!name || !email || !phone || !service || !message) {
-            return res.status(400).json({ success: false, message: "All fields are required." });
+        if (!name || !email || !service || !message) {
+            return res.status(400).json({ success: false, message: "Name, email and message are required." });
         }
 
         try {

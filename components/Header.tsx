@@ -13,7 +13,7 @@ const Header = () => {
         <motion.div
             className="overflow-hidden"
             initial={{ height: 0 }}
-            animate={{ height: 'auto', transition: { delay: 3, duration: 0.4, ease: 'easeInOut' } }}
+            animate={{ height: 'auto', transition: { delay: 0.6, duration: 0.4, ease: 'easeInOut' } }}
         >
             <header className="pt-4 pb-8 xl:pt-8 xl:pb-10 text-white">
                 <div className="container mx-auto flex items-center justify-between">

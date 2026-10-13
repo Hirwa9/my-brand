@@ -8,12 +8,12 @@ const Photo = () => {
         <div className="w-full h-full relative">
             <motion.div
                 initial={{ opacity: 0, }}
-                animate={{ opacity: 1, transition: { delay: 2, duration: 0.4, ease: 'easeIn' } }}
+                animate={{ opacity: 1, transition: { delay: 0.8, duration: 0.4, ease: 'easeIn' } }}
             >
                 {/* Image */}
                 <motion.div
                     initial={{ opacity: 0, }}
-                    animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeInOut' } }}
+                    animate={{ opacity: 1, transition: { delay: 1, duration: 0.4, ease: 'easeInOut' } }}
 
                     className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute">
                     <Image src="/assets/photo.png" alt="" priority quality={100} fill className="object-contain mix-blend-lighten"

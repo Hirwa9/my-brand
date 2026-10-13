@@ -14,12 +14,12 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pb-20">
           {/* Text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">Fullstack & Mobile Developer</span>
             <h1 className="h1 mb-6">
               Hello, I&#39;m <br /><span className="text-accent">Hirwa</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80 leading-6">
-              I thrive at developing sophisticated <span className="text-accent">digital solutions</span>, backed by expertise in a range of programming languages and advanced technologies.
+              I build <span className="text-accent">web and mobile products</span> end to end, from Django and Node.js APIs to Next.js and React Native apps, with apps live on the App Store and Google Play.
             </p>
             {/* CV and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
