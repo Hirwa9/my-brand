@@ -4,7 +4,7 @@
 // This file contains all the static data used to render the app's components
 
 // Icons
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaPhp, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaNodeJs } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaReact, FaAngular, FaPhp, FaLinux, FaGithub, FaLinkedin, FaInstagram, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiVite, SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiSequelize, SiGraphql, SiDocker, SiJsonwebtokens, SiFirebase, SiGithub, SiGit, SiRender, SiVercel, SiPostgresql, SiExpo, SiPython, SiDjango, SiShadcnui, SiReactquery, SiZod, SiPrisma, SiSupabase, SiJest, SiNginx, SiAmazons3 } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { MdDevices } from "react-icons/md";
@@ -81,7 +81,8 @@ export const socials = [
     { name: 'Github', icon: <FaGithub className='size-6' />, path: 'https://github.com/Hirwa9', },
     { name: 'LinkedIn', icon: <FaLinkedin className='size-6' />, path: 'http://linkedin.com/in/hirwa-cyuzuzo-willy-94159427b', },
     { name: 'Instagram', icon: <FaInstagram className='size-6' />, path: 'https://www.instagram.com/hirwa__willy', },
-    { name: 'Facebook', icon: <FaFacebook className='size-6' />, path: 'https://www.facebook.com/profile.php?id=100009250550394', },
+    // Hidden for now; to restore, also re-add FaFacebook to the 'react-icons/fa' import above
+    // { name: 'Facebook', icon: <FaFacebook className='size-6' />, path: 'https://www.facebook.com/profile.php?id=100009250550394', },
 ];
 
 // Projects data
