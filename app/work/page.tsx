@@ -54,9 +54,19 @@ const Work = () => {
                                 </div>
                                 {/* Project category */}
                                 <h2 className="text-[2.625rem] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
-                                <p className="text-accent">{project.title}</p>
-                                {/* Project description */}
-                                <p className="text-white/60">{project.description}</p>
+                                <div className="flex flex-col gap-[1.875rem] xl:gap-3">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-1.5 border border-accent/50 rounded-full">
+                                            <div className="w-2 h-2 bg-accent rounded-full " />
+                                        </div>
+                                        <p className="text-accent text-lg">{project.title}</p>
+                                    </div>
+                                    {/* Project description */}
+                                    <div className="bg-slate-200/5 border border-slate-200/20 rounded-2xl p-3 md:p-4">
+
+                                        <p className="text-white/60">{project.description}</p>
+                                    </div>
+                                </div>
                                 {/* Stack */}
                                 <ul className="flex gap-2 md:gap-3 flex-wrap pb-2 border-white/20">
                                     {project.stack.map((stack, index) => {
