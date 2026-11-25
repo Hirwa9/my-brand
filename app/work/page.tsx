@@ -53,7 +53,7 @@ const Work = () => {
                                     {(projects.findIndex(p => p.title === project.title) + 1).toString().padStart(2, '0')}
                                 </div>
                                 {/* Project category */}
-                                <h2 className="text-[2.625rem] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+                                <h2 className="text-[2.625rem] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
                                 <p className="text-accent">{project.title}</p>
                                 {/* Project description */}
                                 <p className="text-white/60">{project.description}</p>
