@@ -92,6 +92,15 @@ export const socials = [
 export const projects = [
     {
         category: "Native App",
+        title: "Ingendo mobile app",
+        description: "A cross-platform mobile app that provides official intercity bus fares and simplifies seat booking for travelers across Rwanda",
+        stack: ["Expo", "React Native", "TS", "Nativewind", "NextJS", "PostgreSQL"],
+        image: "/assets/work/project-images/ingendo_mobile_feature_graphic.jpg",
+        live: "https://play.google.com/store/apps/details?id=rw.ingendo.mobile",
+        github: "",
+    },
+    {
+        category: "Native App",
         title: "Netpipo mobile app",
         description: "A cross-platform mobile app designed to simplify HR tasks for Rwandan businesses of different types and sizes",
         stack: ["Expo", "React Native", "TS", "Nativewind"],
