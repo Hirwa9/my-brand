@@ -54,7 +54,7 @@ const Work = () => {
                                 </div>
                                 {/* Project category */}
                                 <h2 className="text-[2.625rem] font-bold leading-none text-white hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
-                                <div className="flex flex-col gap-[1.875rem] xl:gap-3">
+                                <div className="flex flex-col gap-5 xl:gap-3">
                                     <div className="flex items-center gap-3">
                                         <div className="p-1.5 border border-accent/50 rounded-full">
                                             <div className="w-2 h-2 bg-accent rounded-full " />
