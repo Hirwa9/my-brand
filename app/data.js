@@ -123,7 +123,7 @@ export const projects = [
         title: "Ingoboka Savings Management System",
         description: "A platform for managing community groups savings, credit inquiries, and more financial transactions.",
         stack: ["ReactJS", "TS", "BS5", "ExpressJS", "NodeJS", "JWT", "MySQL"],
-        image: "/assets/work/project-images/ingoboka_sm_system_landscape.png",
+        image: "/assets/work/project-images/ingoboka_mobile_feature_graphic.png",
         live: "https://ikimina-ingoboka.com",
         github: "https://github.com/Hirwa9/ingoboka-savings-management-system",
     },
